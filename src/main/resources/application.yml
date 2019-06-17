@@ -1,0 +1,3 @@
+server:
+  port:8899
+endpoint-url: https://developers.zomato.com/api/v2.1

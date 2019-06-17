@@ -1,5 +1,6 @@
 package com.verdeinfotech.zomatoapi.controller;
 
+import com.verdeinfotech.zomatoapi.model.LocationSuggestions;
 import com.verdeinfotech.zomatoapi.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +14,8 @@ public class CityController {
     private CityService cityService;
 
     @GetMapping("/cities")
-    public ResponseEntity<Object> getCities(@RequestParam("q") String city){
-        ResponseEntity<Object> responseEntity = cityService.getCity(city);
+    public ResponseEntity<LocationSuggestions> getCities(@RequestParam("q") String city) {
+        ResponseEntity<LocationSuggestions> responseEntity = cityService.getCity(city);
         if (responseEntity != null) {
             System.out.println("response: "+ responseEntity.getBody());
             return ResponseEntity.ok().body(responseEntity.getBody());

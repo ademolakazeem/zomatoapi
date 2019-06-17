@@ -1,7 +1,12 @@
 package com.verdeinfotech.zomatoapi.model;
 
-public class Categories {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Category {
+    @JsonProperty("id")
     private int id;
+
+    @JsonProperty("name")
     private String name;
 
     public int getId() {

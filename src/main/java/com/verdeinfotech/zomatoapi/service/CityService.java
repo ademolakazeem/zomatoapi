@@ -1,12 +1,9 @@
 package com.verdeinfotech.zomatoapi.service;
 
-import com.verdeinfotech.zomatoapi.model.City;
+import com.verdeinfotech.zomatoapi.model.LocationSuggestions;
 import org.springframework.http.ResponseEntity;
 
 
-import java.util.List;
-
-
 public interface CityService {
-ResponseEntity<Object> getCity(String city);
+    ResponseEntity<LocationSuggestions> getCity(String city);
 }

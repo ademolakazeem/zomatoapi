@@ -1,6 +1,6 @@
 package com.verdeinfotech.zomatoapi.controller;
 
-import com.verdeinfotech.zomatoapi.model.Categories;
+import com.verdeinfotech.zomatoapi.model.FirstCategories;
 import com.verdeinfotech.zomatoapi.service.CategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,8 +17,8 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/categories")
-    public ResponseEntity<Categories> getCategories() {
-        ResponseEntity<Categories> responseEntity = categoryService.getCategories();
+    public ResponseEntity<FirstCategories> getCategories() {
+        ResponseEntity<FirstCategories> responseEntity = categoryService.getCategories();
         if (responseEntity != null) {
             LOGGER.info("response: " + responseEntity.getBody());
             return ResponseEntity.ok().body(responseEntity.getBody());

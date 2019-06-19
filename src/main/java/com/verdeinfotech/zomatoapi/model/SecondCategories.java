@@ -2,7 +2,7 @@ package com.verdeinfotech.zomatoapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class OuterCategories {
+public class SecondCategories {
     @JsonProperty("categories")
     private Category category;
 
